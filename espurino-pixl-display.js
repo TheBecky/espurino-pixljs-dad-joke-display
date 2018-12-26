@@ -382,21 +382,17 @@ f.write("364",["Why did the octopus beat the shark in a fight? ??", "Because it 
 f.write("365",["My boyfriend is the square root of -100. ??", "He is perfect but imaginary"]);
 
 
-var greet = [
-  'What are you doing that early?',
-  'Good Morning',
-  'Good Afternoon',
-  'Good Evening'
-][ parseInt(new Date().getHours() / 24 * 4) ];
-
-
 var dt = new Date();
 var day = Math.floor((dt - (new Date(dt.getFullYear(), 0, 0))) / (1000 * 60 * 60 * 24)); // used to get the day number e.g. 350
 var suffix = (dt.getHours() >= 12)? 'pm' : 'am';
 var time = ((dt.getHours() + 11) % 12 + 1)+":"+("0"+dt.getMinutes()).substr(-2)+suffix;
 var temp = E.getTemperature().toFixed(1);
 var tempF = (temp * 9 / 5 + 32).toFixed(1);
-var dateToTest; leap; year; t1; arr;
+var dateToTest;
+var leap;
+var year;
+var t1;
+var arr;
 
 if (leap) {
   t1 = f.read(day-1);
@@ -473,6 +469,13 @@ function nextTag(tags) {
 
 function resetName() {
   writeShortName();
+  var greet = [
+    'What are you doing that early?',
+    'Good Morning',
+    'Good Afternoon',
+    'Good Evening'
+  ][ parseInt(new Date().getHours() / 24 * 4) ];
+
   g.drawString(greet,0,36);
   g.drawString("Auntie Ann!",0,48);
   g.flip();
