@@ -375,7 +375,7 @@ f.write("357",["What's a sea turtle's favorite song? ??", "Jingle shells"]);
 f.write("358",["How did the gingerbread man make his bed? ??", "With cookie sheets"]);
 f.write("359",["Feliz Navidad! ??", "Why are christmas trees so bad at sewing? ??", "they always drop their needles"]);
 f.write("360",["What kind of music do elves listen to? ??", "Wrap"]);
-f.write("361",["Don't trust atoms— they make up everything ??", ""]);
+f.write("361",["Don't trust atoms, they make up everything ??", ""]);
 f.write("362",["Why did the constant break up with the variable? ??", "Because she changed"]);
 f.write("363",["Q: What did the SQL query ask the tables in the bar? ??", "May I JOIN you?"]);
 f.write("364",["Why did the octopus beat the shark in a fight? ??", "Because it was well armed"]);
@@ -434,7 +434,7 @@ function writeName() {
   g.flip();
 }
 
-function onInit() {
+function writeData() {
 // initial view
   setInterval(writeName, 60000);
   g.flip();
@@ -532,4 +532,4 @@ bindButton(resetName, BTN3);
 bindButton(resetName, BTN4);
 
 digitalWrite(LED, 0);
-onInit();
+writeData();
